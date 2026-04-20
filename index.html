@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <title>Classmate Registry</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            padding: 20px; 
+        }
+
+        header {
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .container { 
+            max-width: 600px; 
+            margin: auto; background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+
+        input { 
+            width: 100%; 
+            padding: 10px; 
+            margin-bottom: 10px; 
+            border: 1px solid #ddd; 
+            border-radius: 4px; 
+            box-sizing: border-box; }
+
+        .button-group { 
+            display: flex; 
+            gap: 10px; 
+            margin-bottom: 20px; }
+
+        button { 
+            flex: 1; 
+            padding: 12px; 
+            border: none; 
+            border-radius: 4px; 
+            color: white; 
+            font-weight: bold; 
+            cursor: pointer; 
+            background-color: #C44545;}
+
+        .list-title { 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+            border-bottom: 1px solid hsl(0, 0%, 93%); 
+            padding-bottom: 5px; }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header> -- Grade 10 Classmates System -- </header>
+
+        <br>
+
+        <input type="text" id="nameInput" placeholder="Name">
+        <input type="text" id="sectionInput" placeholder="Section">
+        <input type="text" id="subjectInput" placeholder="Favorite Subject">
+
+        <div class="button-group">
+            <button py-click="add_new_classmate">Add Classmate</button>
+        </div>
+
+        <div class="list-section">
+            <div class="list-title">📋 Classmate List</div>
+            <div id="displayArea"></div>
+        </div>
+    </div>
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>
